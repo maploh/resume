@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    /* height: 100vh; */
+    background: linear-gradient(to bottom, grey , white);
+}
+.line{
+    width:100%;
+    border-bottom: 5px #f7786b  solid;
+}
+
+.container{
+    position: relative;
+    text-align: center;
+}
+.profile-pic{
+    width: 250px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.introduction{
+    text-align: center; 
+}
+
+.introduction h1{
+    margin-bottom: 40px;
+    font-size: 300%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: gray;
+}
+
+.typed-words{
+    font-family: 'Roboto', sans-serif !important;
+    color: rgb(114, 114, 114);
+    font-size: 140%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+.button{
+    margin-top: 400px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: all .3s ease-in-out, color 0.2s 0.3s;
+    letter-spacing: 0;
+    border-radius: 45px;
+    height: auto;
+    padding: .8em 2.1em;
+    color: #f35f4f;
+    border: #f35f4f solid 2px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #f35f4f;
+    color: white;   
+    padding: .8em 2.7em;
+    box-shadow: none;
+}
+
+.education{
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f35f4f;
+    padding: 60px 0; 
+}
+
+.education h1{
+    font-size: 300%;
+    color: white;
+    background-color: #f35f4f;   
+    margin-bottom: 30px;   
+}
+
+.wrapper{
+    background-color: #f35f4f;
+    text-align: center;
+    color:white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10%;
+}
+
+ion-icon{
+    font-size: 220%;
+    margin-bottom: 10px;
+    color: aquamarine;
+}
+
+
+.edu h2{
+    margin-bottom: 30px;
+    font-size: 230%;
+}
+
+.edu p{
+    margin-bottom: 10px;
+    color: lightgrey;
+}
+
+.edu h3{
+    margin-bottom: 30px;
+}
+.highschool{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.edu p:last-child{
+    margin-bottom: 30px;
+}
+
+/* Skill */
+
+
+.skill{
+    color: white;
+    background-color: #4c6d86;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.skill h1{
+    font-size: 300%;
+    padding: 50px 0;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.col{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.col li{
+    list-style-type:circle;
+    text-align: left;
+}
+
+
+/* contact */
+.contact{
+    text-align: center;    
+    color: #f35f4f;
+}
+.contact h1{
+    font-size: 300%;
+    padding: 50px 0;
+}
+
+.contact ion-icon{
+    color: #f35f4f;
+
+}
+
+.icon-text{
+    vertical-align: middle;
+}

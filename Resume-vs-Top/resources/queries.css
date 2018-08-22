@@ -2,6 +2,11 @@
     .wrapper{
         grid-template-columns: 1fr;
     }
+    .col{
+        padding: 0 20%;
+        padding-left: 23%;
+    }
+
 }
 @media (max-width: 480px) {
     .wrapper{
@@ -17,4 +22,5 @@
     .skills ul{
         margin-bottom: 20px;
     }
+
 }

@@ -4,44 +4,192 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 
-*{
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
-header{
+main {
+    transition: all ease 0.3s;
+}
+
+/* ------------modal----------- */
+.modal {
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 0px;
+}
+
+.show-modal {
+    display: block;
+}
+
+.modal__content {
+    background: #2C3344;
+    width: 80%;
+    max-width: 640px;
+    margin: 3rem auto;
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    position: relative;
+    color: white;
+    animation: 0.3s slideDown;
+}
+
+.modal__body ion-icon {
+    color: #f35f4e;
+}
+
+.modal__body ion-icon:last-child {
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    color: #DDD7CE;
+    top: 0px;
+    left: 10px;
+    font-size: 4rem;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.modal__body {
+    padding: 2rem;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    color: #DDD7CE;
+    line-height: 2rem;
+}
+
+
+/* animation modal */
+@keyframes slideDown {
+    from {
+        top: -100px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* -----------nav------------- */
+.nav-trigger {
+    font-size: 50px;
+    position: fixed;
+    left: 25px;
+    color: #303030;
+    z-index: 8;
+}
+
+.nav-trigger:hover {
+    cursor: pointer;
+}
+
+.nav {
+    z-index: 9;
+    position: fixed;
+    width: 300px;
+    background-color: #303030;
+    text-align: center;
+    height: 100%;
+    left: -300px;
+    transition: 0.3s all ease;
+    color: white;
+}
+
+.nav-triggered {
+    left: 0px;
+}
+
+
+/* .nav-side{
+    list-style-type: none;
+} */
+.nav-list {
+    line-height: 50px;
+    color: #e5e5e5;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.nav-list li {
+    border-bottom: 1px solid rgb(160, 160, 160);
+    width: 80%;
+    transition: all ease 0.3s;
+}
+
+.nav-list li:hover {
+    border-bottom: 1px solid #f35f4e;
+    color: #f35f4e;
+    width: 100%;
+}
+
+
+.shift {
+    /* margin-left: 300px; */
+}
+
+/* a{
+    text-decoration: none;
+    color: #888888;
+    line-height: 2rem;
+} */
+
+
+/* ---------main---------- */
+
+header {
     /* height: 100vh; */
-    background-image: linear-gradient(  #4c6d86 0,  #4c6d86 180px, 	#e5e5e5  180px, #e5e5e5 100%);
+    background-image: linear-gradient(#4c6d86 0, #4c6d86 180px, #e5e5e5 180px, #e5e5e5 100%);
+}
+.opaque{
+    opacity: 0.7;
 }
 
 
-
-.line{
-    width:100%;
-    border-bottom: 5px #f7786b  solid;
+.line {
+    width: 100%;
+    border-bottom: 5px #f7786b solid;
     position: fixed;
     z-index: 1;
 }
 
-.container{
+.container {
     position: relative;
     text-align: center;
 }
 
-.profile-pic{
+.profile-pic {
     width: 250px;
     border-radius: 50%;
     margin-top: 50px;
     margin-bottom: 40px;
 }
 
-.introduction{
-    text-align: center; 
+.introduction {
+    text-align: center;
 }
 
-.introduction h1{
+.introduction h1 {
     margin-bottom: 40px;
     font-size: 300%;
     font-family: 'Montserrat', sans-serif;
@@ -49,20 +197,20 @@ header{
     color: gray;
 }
 
-.typed-words{
+.typed-words {
     font-family: 'Roboto', sans-serif !important;
     color: rgb(114, 114, 114);
     font-size: 140%;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 
 
 
-.button{
+.button {
     margin-top: 400px;
     font-size: 1em;
     text-transform: uppercase;
@@ -77,123 +225,128 @@ a{
     box-shadow: 5px 10px 18px #888888;
 }
 
-.button:hover{
+.button:hover {
     cursor: pointer;
     background-color: #f35f4f;
-    color: white;   
+    color: white;
     padding: .8em 2.7em;
     box-shadow: none;
 }
 
-.education{
+.education {
     text-align: center;
     padding-top: 50px;
     background-color: #f35f4f;
-    padding: 60px 0; 
+    padding: 60px 0;
 }
 
-.education h1{
+.education h1 {
     font-size: 300%;
     color: white;
-    background-color: #f35f4f;   
-    margin-bottom: 30px;   
+    background-color: #f35f4f;
+    margin-bottom: 30px;
 }
 
-.wrapper{
+.wrapper {
     background-color: #f35f4f;
     text-align: center;
-    color:white;
+    color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 10%;
 }
 
-ion-icon{
+ion-icon {
     font-size: 220%;
     margin-bottom: 10px;
     color: aquamarine;
 }
 
 
-.edu h2{
+.edu h2 {
     margin-bottom: 30px;
     font-size: 230%;
 }
 
-.edu p{
+.edu p {
     margin-bottom: 10px;
     color: lightgrey;
 }
 
-.edu h3{
+.edu h3 {
     margin-bottom: 30px;
 }
-.highschool{
-    display:grid;
+
+.highschool {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.edu p:last-child{
+.edu p:last-child {
     margin-bottom: 30px;
 }
 
 /* Skill */
 
 
-.skill{
+.skill {
     color: white;
     background-color: #4c6d86;
     text-align: center;
     padding-bottom: 50px;
 }
 
-.skill h1{
+.skill h1 {
     font-size: 300%;
     padding: 50px 0;
 }
 
-.skills{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.col{
+.col {
     padding: 0 15%;
 }
-.col li{
-    list-style-type:circle;
+
+.col li {
+    list-style-type: circle;
     text-align: left;
 }
 
 
 /* contact */
-.contact{
-    text-align: center;    
+.contact {
+    text-align: center;
     color: #f35f4f;
 }
-.contact h1{
+
+.contact h1 {
     font-size: 300%;
     padding: 50px 0;
 }
 
-.contact ion-icon{
+.contact ion-icon {
     color: #f35f4f;
 
 }
-.phone{
+
+.phone {
     margin-top: 40px;
     margin-bottom: 30px;
 }
+
 .icon-with-text {
     display: inline-block;
     font-size: 35px;
     color: #ffC977;
     vertical-align: middle;
 }
-   
-.text{
-     display: inline-block;
-     vertical-align: middle;
-     padding-bottom: 10px;
-     padding-left: 10px;
+
+.text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
